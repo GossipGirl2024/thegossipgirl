@@ -2,12 +2,12 @@ self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open('gossip-cache').then((cache) => {
       return cache.addAll([
-        '/repository-name/',
-        '/repository-name/index.html',
-        '/repository-name/styles.css',
-        '/repository-name/script.js',
-        '/repository-name/icon-192.png',
-        '/repository-name/icon-512.png'
+        './', 
+        './index.html',
+        './styles.css',
+        './script.js',
+        './icon-192.png',
+        './icon-512.png'
       ]);
     })
   );
