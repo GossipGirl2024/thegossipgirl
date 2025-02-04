@@ -117,7 +117,30 @@ background-image: url('https://i.ytimg.com/vi/gk6QuPkPy9Q/maxresdefault.jpg'); /
     }
 }
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play Sound Once</title>
+</head>
+<body>
 
+<audio id="myAudio" src="https://drive.google.com/file/d/10N1FNlls2SJDLGbe0Zk5W8Ev4ksOcMKo/view?usp=drivesdk"></audio>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let audio = document.getElementById("myAudio");
+
+        if (!sessionStorage.getItem("audioPlayed")) {
+            audio.play().catch(error => console.log("Autoplay blocked:", error));
+            sessionStorage.setItem("audioPlayed", "true");
+        }
+    });
+</script>
+
+</body>
+</html>        
 
 
         
