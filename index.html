@@ -81,6 +81,12 @@
             font-size: 1.2em;
         }
 
+        if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/Gossip-Girl/service-worker.js')
+    .then(() => console.log('Service Worker Registered'))
+    .catch((err) => console.error('Service Worker registration failed:', err));
+}
+
 
         html, body {
     background-color: #000; /* Ensures the entire background is black */
