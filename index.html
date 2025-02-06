@@ -10,6 +10,9 @@
   background-color: #000; /* Black background */
   color: #fff; /* White text */
   min-height: 100vh; /* Ensures full height */
+             height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
         /* Global Styles */
@@ -104,14 +107,12 @@
         }
 
         footer {
-            background-color: #000;
-            text-align: center;
-            padding: 15px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            color: #d4af37;
-            font-size: 1.2em;
+           background-color: #000;
+    text-align: center;
+    padding: 15px;
+    width: 100%;
+    color: #d4af37;
+    font-size: 1.2em;
         }
 
 
@@ -181,7 +182,7 @@ background-image: url('https://i.ytimg.com/vi/gk6QuPkPy9Q/maxresdefault.jpg'); /
     </header>
 
 <main>
- 
+ flex: 1; /* Makes main content take up remaining space */
     
    <!-- Main container for the post -->
     <div class="main-container">
